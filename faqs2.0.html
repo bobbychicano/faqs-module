@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQs 2.0</title>
+  </head>
+  <body>
+    <style>
+      #faq {
+        margin: 0.5rem 2%;
+      }
+
+      #faq .heading-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      #faq .heading-wrap p {
+        font-family: "PetcoCircular", arial !important;
+        font-size: 16px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.38;
+        letter-spacing: 0.5px;
+        color: #000;
+        padding-bottom: 10px;
+      }
+
+      #faq .heading-wrap h2 {
+        font-family: "PetcoCircular-Bold", arial !important;
+        font-size: 25px;
+        line-height: 1.28em;
+        letter-spacing: 0.25px;
+        color: #000;
+        padding: 0;
+        margin: 0;
+      }
+
+      #faq .panel {
+        width: 1224px;
+        height: 88px;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #faq .panel:hover {
+      }
+
+      #faq .panel-heading a {
+        position: relative;
+        display: block;
+        text-decoration: none;
+        margin: 0 80px;
+        transition: all 300ms ease-in-out;
+      }
+
+      #faq .panel-heading a:after {
+        position: absolute;
+        content: "\2212";
+        color: #00205b;
+        font-size: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+      }
+
+      #faq .panel-heading a.collapsed:after {
+        content: "\002B";
+      }
+
+      #faq .panel-heading h3 {
+        font-family: "PetcoCircular-Bold", arial !important;
+        font-size: 18px;
+        line-height: 1.25em;
+        letter-spacing: 0.225px;
+        color: #000;
+        margin: 0 10% 0 0;
+      }
+
+      #faq .panel-collapse {
+        transition: height 0.4s ease-in;
+        overflow: hidden;
+        height: 0;
+      }
+      #faq .panel-collapse.open {
+        height: 81px;
+        transition: height 0.4s ease-in;
+      }
+
+      #faq .panel-body {
+        margin: 0 15px 15px 15px;
+        padding-right: 5%;
+        overflow: hidden;
+        height: auto;
+      }
+
+      #faq .panel-body p {
+        font-family: "PetcoCircular", arial !important;
+        font-size: 16px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.38;
+        letter-spacing: 0.5px;
+        color: #000;
+        padding-bottom: 10px;
+      }
+
+      #faq .panel-body p:last-of-type {
+        padding-bottom: 0;
+      }
+      #faq .panel-body ul {
+        margin-left: 30px;
+        padding-top: 10px;
+      }
+      #faq .panel-body ol {
+        margin-left: 30px;
+        padding-top: 10px;
+      }
+      #faq .panel-body li {
+        color: #000;
+        padding-bottom: 5px;
+      }
+      #faq .panel-body li:last-of-type {
+        padding-bottom: 0;
+      }
+      #faq .panel-body a {
+        font-size: 16px;
+        color: #00205b;
+        text-decoration: underline;
+        font-weight: normal;
+      }
+      #faq .panel-body a:hover {
+        color: #00205b;
+      }
+      @media screen and (max-width: 768px) {
+        #faq {
+          margin: 0.5rem 20px;
+        }
+      }
+    </style>
+
+    <section>
+      <div id="faq-panel" itemscope itemtype="https://schema.org/FAQPage">
+        <div class="container">
+          <div id="interceptor-faqs">
+            <div class="bs-example">
+              <div id="faq" class="panel-group">
+                <div class="heading-wrap">
+                  <p>F.A.Q.</p>
+                  <h2>Have any Questions about Vital Care?</h2>
+                </div>
+                <div
+                  class="panel"
+                  itemscope
+                  itemprop="mainEntity"
+                  itemtype="https://schema.org/Question"
+                >
+                  <div class="panel-heading">
+                    <a
+                      data-parent="#faq"
+                      data-toggle="collapse"
+                      class="collapsed"
+                      href="#faq-collapse1"
+                      onclick="clickTrackLink(this);"
+                      manual_cm_sp=""
+                    >
+                      <h3 itemprop="name">Question</h3>
+                    </a>
+                  </div>
+                  <div id="faq-collapse1" class="panel-collapse">
+                    <div
+                      class="panel-body"
+                      itemscope
+                      itemprop="acceptedAnswer"
+                      itemtype="https://schema.org/Answer"
+                    >
+                      <div itemprop="text">
+                        <p>ANSWER</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="panel"
+                  itemscope
+                  itemprop="mainEntity"
+                  itemtype="https://schema.org/Question"
+                >
+                  <div class="panel-heading">
+                    <a
+                      data-parent="#faq"
+                      data-toggle="collapse"
+                      class="collapsed"
+                      href="#faq-collapse2"
+                      onclick="clickTrackLink(this);"
+                      manual_cm_sp=""
+                    >
+                      <h3 itemprop="name">QUESTION</h3>
+                    </a>
+                  </div>
+                  <div id="faq-collapse2" class="panel-collapse">
+                    <div
+                      class="panel-body"
+                      itemscope
+                      itemprop="acceptedAnswer"
+                      itemtype="https://schema.org/Answer"
+                    >
+                      <div itemprop="text">
+                        <p>ANSWER</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="panel"
+                  itemscope
+                  itemprop="mainEntity"
+                  itemtype="https://schema.org/Question"
+                >
+                  <div class="panel-heading">
+                    <a
+                      data-parent="#faq"
+                      data-toggle="collapse"
+                      class="collapsed"
+                      href="#faq-collapse3"
+                      onclick="clickTrackLink(this);"
+                      manual_cm_sp=""
+                    >
+                      <h3 itemprop="name">QUESTION</h3>
+                    </a>
+                  </div>
+                  <div id="faq-collapse3" class="panel-collapse">
+                    <div
+                      class="panel-body"
+                      itemscope
+                      itemprop="acceptedAnswer"
+                      itemtype="https://schema.org/Answer"
+                    >
+                      <div itemprop="text">
+                        <p>ANSWER</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="panel"
+                  itemscope
+                  itemprop="mainEntity"
+                  itemtype="https://schema.org/Question"
+                >
+                  <div class="panel-heading">
+                    <a
+                      data-parent="#faq"
+                      data-toggle="collapse"
+                      class="collapsed"
+                      href="#faq-collapse4"
+                      onclick="clickTrackLink(this);"
+                      manual_cm_sp=""
+                    >
+                      <h3 itemprop="name">QUESTION</h3>
+                    </a>
+                  </div>
+                  <div id="faq-collapse4" class="panel-collapse">
+                    <div
+                      class="panel-body"
+                      itemscope
+                      itemprop="acceptedAnswer"
+                      itemtype="https://schema.org/Answer"
+                    >
+                      <div itemprop="text">
+                        <p>ANSWER</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="panel"
+                  itemscope
+                  itemprop="mainEntity"
+                  itemtype="https://schema.org/Question"
+                >
+                  <div class="panel-heading">
+                    <a
+                      data-parent="#faq"
+                      data-toggle="collapse"
+                      class="collapsed"
+                      href="#faq-collapse5"
+                      onclick="clickTrackLink(this);"
+                      manual_cm_sp=""
+                    >
+                      <h3 itemprop="name">QUESTION</h3>
+                    </a>
+                  </div>
+                  <div id="faq-collapse5" class="panel-collapse">
+                    <div
+                      class="panel-body"
+                      itemscope
+                      itemprop="acceptedAnswer"
+                      itemtype="https://schema.org/Answer"
+                    >
+                      <div itemprop="text">
+                        <p>ANSWER</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- faq question -->
+                <div
+                  class="panel"
+                  itemscope
+                  itemprop="mainEntity"
+                  itemtype="https://schema.org/Question"
+                >
+                  <div class="panel-heading">
+                    <a
+                      class="collapsed autotag"
+                      onclick="clickTrackLink(this);"
+                    >
+                      <h3 itemprop="name">QUESTION</h3>
+                    </a>
+                  </div>
+
+                  <!-- faq answer -->
+                  <div class="panel-collapse">
+                    <div
+                      class="panel-body"
+                      itemscope
+                      itemtype="https://schema.org/Answer"
+                    >
+                      <p itemprop="acceptedAnswer">ANSWER</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const question = document.getElementsByClassName("panel");
+
+      for (let i = 0; i < question.length; i++) {
+        question[i].addEventListener("click", function () {
+          let panelHeading = this.firstElementChild;
+          let anchorTag = panelHeading.firstElementChild;
+          //toggle 'collapsed' class from <a> element
+          anchorTag.classList.toggle("collapsed");
+
+          //add 'open' class to outermost <div> of answer
+          let panelBody = this.querySelector(".panel-collapse");
+          panelBody.classList.toggle("open");
+        });
+      }
+    </script>
+  </body>
+</html>
