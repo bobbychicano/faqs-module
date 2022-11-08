@@ -27,7 +27,7 @@
         font-style: normal;
         line-height: 1.38;
         letter-spacing: 0.5px;
-        color: #000;
+        color: #333333;
         padding-bottom: 10px;
       }
 
@@ -43,10 +43,14 @@
 
       #faq .panel {
         width: 1224px;
-        height: 88px;
+        min-height: 88px;
         border-radius: 5px;
         background-color: #f2f2f2;
         margin: 0 auto 24px auto;
+      }
+
+      #faq .panel.blue-background {
+        background-color: #6edcfa;
       }
 
       #faq .panel:hover {
@@ -56,22 +60,22 @@
         position: relative;
         display: block;
         text-decoration: none;
+        padding: 36px 0 16px 0;
         margin: 0 80px;
         transition: all 300ms ease-in-out;
       }
 
       #faq .panel-heading a:after {
         position: absolute;
-        content: "\2212";
-        color: #00205b;
-        font-size: 25px;
+        content: url("https://assets.petco.com/petco/image/upload/f_auto,w_24/vector.png");
         top: 50%;
-        transform: translateY(-50%);
+        transform: rotate(180deg);
         right: 0;
       }
 
       #faq .panel-heading a.collapsed:after {
-        content: "\002B";
+        content: url("https://assets.petco.com/petco/image/upload/f_auto,w_24/vector.png");
+        transform: rotate(0deg);
       }
 
       #faq .panel-heading h3 {
@@ -79,8 +83,13 @@
         font-size: 18px;
         line-height: 1.25em;
         letter-spacing: 0.225px;
+        color: #00205b;
+        margin: 0;
+        transition: color 0.4s ease-in;
+      }
+
+      #faq .panel-heading .collapsed h3 {
         color: #000;
-        margin: 0 10% 0 0;
       }
 
       #faq .panel-collapse {
@@ -89,13 +98,13 @@
         height: 0;
       }
       #faq .panel-collapse.open {
-        height: 81px;
+        height: auto;
         transition: height 0.4s ease-in;
       }
 
       #faq .panel-body {
         margin: 0 80px 0 80px;
-        padding-right: 5%;
+        padding: 0 5% 32px 0;
         overflow: hidden;
         height: auto;
       }
@@ -107,8 +116,9 @@
         font-style: normal;
         line-height: 1.38;
         letter-spacing: 0.5px;
-        color: #000;
+        color: #333333;
         padding-bottom: 10px;
+        margin: 0;
       }
 
       #faq .panel-body p:last-of-type {
@@ -123,7 +133,7 @@
         padding-top: 10px;
       }
       #faq .panel-body li {
-        color: #000;
+        color: #333333;
         padding-bottom: 5px;
       }
       #faq .panel-body li:last-of-type {
@@ -170,7 +180,7 @@
                       onclick="clickTrackLink(this);"
                       manual_cm_sp=""
                     >
-                      <h3 itemprop="name">Question</h3>
+                      <h3 itemprop="name">QUESTION?</h3>
                     </a>
                   </div>
 
@@ -182,7 +192,18 @@
                       itemtype="https://schema.org/Answer"
                     >
                       <div itemprop="text">
-                        <p>ANSWER</p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Ut maximus ligula et sapien ultricies convallis.
+                          Aliquam molestie convallis est, vitae consectetur
+                          purus gravida a. Donec aliquet erat nec ex blandit,
+                          sit amet tempor risus faucibus. Maecenas lobortis
+                          pharetra ex, quis laoreet velit facilisis id. Fusce
+                          neque magna, venenatis non mauris et, auctor porttitor
+                          felis. Proin sit amet luctus felis. Sed pharetra orci
+                          tristique, feugiat metus a, suscipit metus.
+                          Suspendisse non sodales ipsum.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -213,7 +234,18 @@
                       itemtype="https://schema.org/Answer"
                     >
                       <div itemprop="text">
-                        <p>ANSWER</p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Ut maximus ligula et sapien ultricies convallis.
+                          Aliquam molestie convallis est, vitae consectetur
+                          purus gravida a. Donec aliquet erat nec ex blandit,
+                          sit amet tempor risus faucibus. Maecenas lobortis
+                          pharetra ex, quis laoreet velit facilisis id. Fusce
+                          neque magna, venenatis non mauris et, auctor porttitor
+                          felis. Proin sit amet luctus felis. Sed pharetra orci
+                          tristique, feugiat metus a, suscipit metus.
+                          Suspendisse non sodales ipsum.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -244,7 +276,18 @@
                       itemtype="https://schema.org/Answer"
                     >
                       <div itemprop="text">
-                        <p>ANSWER</p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Ut maximus ligula et sapien ultricies convallis.
+                          Aliquam molestie convallis est, vitae consectetur
+                          purus gravida a. Donec aliquet erat nec ex blandit,
+                          sit amet tempor risus faucibus. Maecenas lobortis
+                          pharetra ex, quis laoreet velit facilisis id. Fusce
+                          neque magna, venenatis non mauris et, auctor porttitor
+                          felis. Proin sit amet luctus felis. Sed pharetra orci
+                          tristique, feugiat metus a, suscipit metus.
+                          Suspendisse non sodales ipsum.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -275,7 +318,18 @@
                       itemtype="https://schema.org/Answer"
                     >
                       <div itemprop="text">
-                        <p>ANSWER</p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Ut maximus ligula et sapien ultricies convallis.
+                          Aliquam molestie convallis est, vitae consectetur
+                          purus gravida a. Donec aliquet erat nec ex blandit,
+                          sit amet tempor risus faucibus. Maecenas lobortis
+                          pharetra ex, quis laoreet velit facilisis id. Fusce
+                          neque magna, venenatis non mauris et, auctor porttitor
+                          felis. Proin sit amet luctus felis. Sed pharetra orci
+                          tristique, feugiat metus a, suscipit metus.
+                          Suspendisse non sodales ipsum.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -306,7 +360,18 @@
                       itemtype="https://schema.org/Answer"
                     >
                       <div itemprop="text">
-                        <p>ANSWER</p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Ut maximus ligula et sapien ultricies convallis.
+                          Aliquam molestie convallis est, vitae consectetur
+                          purus gravida a. Donec aliquet erat nec ex blandit,
+                          sit amet tempor risus faucibus. Maecenas lobortis
+                          pharetra ex, quis laoreet velit facilisis id. Fusce
+                          neque magna, venenatis non mauris et, auctor porttitor
+                          felis. Proin sit amet luctus felis. Sed pharetra orci
+                          tristique, feugiat metus a, suscipit metus.
+                          Suspendisse non sodales ipsum.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -335,7 +400,17 @@
                       itemscope
                       itemtype="https://schema.org/Answer"
                     >
-                      <p itemprop="acceptedAnswer">ANSWER</p>
+                      <p itemprop="acceptedAnswer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Ut maximus ligula et sapien ultricies convallis. Aliquam
+                        molestie convallis est, vitae consectetur purus gravida
+                        a. Donec aliquet erat nec ex blandit, sit amet tempor
+                        risus faucibus. Maecenas lobortis pharetra ex, quis
+                        laoreet velit facilisis id. Fusce neque magna, venenatis
+                        non mauris et, auctor porttitor felis. Proin sit amet
+                        luctus felis. Sed pharetra orci tristique, feugiat metus
+                        a, suscipit metus. Suspendisse non sodales ipsum.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -351,6 +426,8 @@
 
       for (let i = 0; i < question.length; i++) {
         question[i].addEventListener("click", function () {
+          question[i].classList.toggle("blue-background");
+
           let panelHeading = this.firstElementChild;
           let anchorTag = panelHeading.firstElementChild;
           //toggle 'collapsed' class from <a> element
