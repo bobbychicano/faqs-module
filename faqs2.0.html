@@ -12,6 +12,14 @@
         margin: 0.5rem 2%;
       }
 
+      #faq *,
+      #faq *::before,
+      #faq *::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
       #faq .heading-wrap {
         display: flex;
         flex-direction: column;
@@ -36,7 +44,7 @@
         font-size: 25px;
         line-height: 1.28em;
         letter-spacing: 0.25px;
-        color: #000;
+        color: #333333;
         padding: 0;
         margin: 0;
       }
@@ -50,7 +58,7 @@
       }
 
       #faq .panel.blue-background {
-        background-color: #6edcfa;
+        background-color: #ebf1ff;
       }
 
       #faq .panel:hover {
@@ -89,24 +97,20 @@
       }
 
       #faq .panel-heading .collapsed h3 {
-        color: #000;
+        color: #333333;
       }
 
-      #faq .panel-collapse {
-        transition: height 0.4s ease-in;
+      #faq .answer {
         overflow: hidden;
         height: 0;
-      }
-      #faq .panel-collapse.open {
-        height: auto;
-        transition: height 0.4s ease-in;
+        transition: height 0.2s ease-out;
       }
 
       #faq .panel-body {
-        margin: 0 80px 0 80px;
+        margin: 0 80px;
         padding: 0 5% 32px 0;
         overflow: hidden;
-        height: auto;
+        /* height: auto; */
       }
 
       #faq .panel-body p {
@@ -176,15 +180,54 @@
                       data-parent="#faq"
                       data-toggle="collapse"
                       class="collapsed"
-                      href="#faq-collapse1"
+                      href="#answer-panel-1"
                       onclick="clickTrackLink(this);"
                       manual_cm_sp=""
                     >
-                      <h3 itemprop="name">QUESTION?</h3>
+                      <h3 itemprop="name">QUESTION</h3>
                     </a>
                   </div>
 
-                  <div id="faq-collapse1" class="panel-collapse">
+                  <div id="answer-panel" class="answer">
+                    <div
+                      class="panel-body"
+                      itemscope
+                      itemprop="acceptedAnswer"
+                      itemtype="https://schema.org/Answer"
+                    >
+                      <p itemprop="text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Ut maximus ligula et sapien ultricies convallis. Aliquam
+                        molestie convallis est, vitae consectetur purus gravida
+                        a. Donec aliquet erat nec ex blandit, sit amet tempor
+                        risus faucibus. Maecenas lobortis pharetra ex, quis
+                        laoreet velit facilisis id. Fusce neque magna, venenatis
+                        non mauris et, auctor porttitor felis. Proin sit amet
+                        luctus felis. Sed pharetra orci tristique, feugiat metus
+                        a, suscipit metus. Suspendisse non sodales ipsum.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="panel"
+                  itemscope
+                  itemprop="mainEntity"
+                  itemtype="https://schema.org/Question"
+                >
+                  <div class="panel-heading">
+                    <a
+                      data-parent="#faq"
+                      data-toggle="collapse"
+                      class="collapsed"
+                      href="#answer-panel-2"
+                      onclick="clickTrackLink(this);"
+                      manual_cm_sp=""
+                    >
+                      <h3 itemprop="name">QUESTION</h3>
+                    </a>
+                  </div>
+                  <div id="answer-panel-2" class="answer">
                     <div
                       class="panel-body"
                       itemscope
@@ -219,14 +262,14 @@
                       data-parent="#faq"
                       data-toggle="collapse"
                       class="collapsed"
-                      href="#faq-collapse2"
+                      href="#answer-panel-3"
                       onclick="clickTrackLink(this);"
                       manual_cm_sp=""
                     >
                       <h3 itemprop="name">QUESTION</h3>
                     </a>
                   </div>
-                  <div id="faq-collapse2" class="panel-collapse">
+                  <div id="answer-panel-3" class="answer">
                     <div
                       class="panel-body"
                       itemscope
@@ -261,14 +304,14 @@
                       data-parent="#faq"
                       data-toggle="collapse"
                       class="collapsed"
-                      href="#faq-collapse3"
+                      href="#answer-panel-4"
                       onclick="clickTrackLink(this);"
                       manual_cm_sp=""
                     >
                       <h3 itemprop="name">QUESTION</h3>
                     </a>
                   </div>
-                  <div id="faq-collapse3" class="panel-collapse">
+                  <div id="answer-panel-4" class="answer">
                     <div
                       class="panel-body"
                       itemscope
@@ -303,56 +346,14 @@
                       data-parent="#faq"
                       data-toggle="collapse"
                       class="collapsed"
-                      href="#faq-collapse4"
+                      href="#answer-panel-5"
                       onclick="clickTrackLink(this);"
                       manual_cm_sp=""
                     >
                       <h3 itemprop="name">QUESTION</h3>
                     </a>
                   </div>
-                  <div id="faq-collapse4" class="panel-collapse">
-                    <div
-                      class="panel-body"
-                      itemscope
-                      itemprop="acceptedAnswer"
-                      itemtype="https://schema.org/Answer"
-                    >
-                      <div itemprop="text">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Ut maximus ligula et sapien ultricies convallis.
-                          Aliquam molestie convallis est, vitae consectetur
-                          purus gravida a. Donec aliquet erat nec ex blandit,
-                          sit amet tempor risus faucibus. Maecenas lobortis
-                          pharetra ex, quis laoreet velit facilisis id. Fusce
-                          neque magna, venenatis non mauris et, auctor porttitor
-                          felis. Proin sit amet luctus felis. Sed pharetra orci
-                          tristique, feugiat metus a, suscipit metus.
-                          Suspendisse non sodales ipsum.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="panel"
-                  itemscope
-                  itemprop="mainEntity"
-                  itemtype="https://schema.org/Question"
-                >
-                  <div class="panel-heading">
-                    <a
-                      data-parent="#faq"
-                      data-toggle="collapse"
-                      class="collapsed"
-                      href="#faq-collapse5"
-                      onclick="clickTrackLink(this);"
-                      manual_cm_sp=""
-                    >
-                      <h3 itemprop="name">QUESTION</h3>
-                    </a>
-                  </div>
-                  <div id="faq-collapse5" class="panel-collapse">
+                  <div id="answer-panel-5" class="answer">
                     <div
                       class="panel-body"
                       itemscope
@@ -394,7 +395,7 @@
                   </div>
 
                   <!-- faq answer -->
-                  <div class="panel-collapse">
+                  <div id="answer-panel" class="answer">
                     <div
                       class="panel-body"
                       itemscope
@@ -430,12 +431,19 @@
 
           let panelHeading = this.firstElementChild;
           let anchorTag = panelHeading.firstElementChild;
-          //toggle 'collapsed' class from <a> element
+          //toggle 'collapsed' class on <a> element
           anchorTag.classList.toggle("collapsed");
 
           //add 'open' class to outermost <div> of answer
-          let panelBody = this.querySelector(".panel-collapse");
-          panelBody.classList.toggle("open");
+          // let answerPanel = document.getElementById("answer-panel");
+
+          let answerPanel = this.querySelector(".answer");
+
+          if (answerPanel.style.height) {
+            answerPanel.style.height = null;
+          } else {
+            answerPanel.style.height = answerPanel.scrollHeight + "px";
+          }
         });
       }
     </script>
